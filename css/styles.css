@@ -1,0 +1,158 @@
+/* General Reset and Global Styles */
+* {
+    margin: 0; /* Reset margins for all elements */
+    padding: 0; /* Reset padding for all elements */
+    box-sizing: border-box; /* Include padding and borders in element width/height */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Set default font family */
+    background-color: #f8f9fa; /* Light background color */
+    color: #212529; /* Dark text color for readability */
+    min-width: 1200px; /* Prevent the layout from becoming too narrow */
+}
+
+.container {
+    max-width: 1200px; /* Set maximum width for container */
+    padding: 2rem; /* Add padding around content */
+}
+
+h1 {
+    font-size: 2rem; /* Large heading size */
+    font-weight: 500; /* Semi-bold text */
+    color: #212529; /* Dark text for better contrast */
+    text-align: center; /* Center the title */
+    margin-bottom: 2rem; /* Add space below the title */
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed; /* Keep notification in view */
+    top: 20px; /* Position near top */
+    right: 20px; /* Align to the right */
+    display: none; /* Hidden by default */
+    animation: fadeIn 0.3s ease-out; /* Smooth fade-in effect */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.notification-content {
+    background-color: #ffffff; /* White background for notification */
+    padding: 1rem 1.5rem; /* Add padding for readability */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border: 1px solid #dee2e6; /* Light border for emphasis */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-20px); /* Slide in from above */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Reset position */
+    }
+}
+
+/* Form Section Styles */
+.form-section {
+    background-color: #ffffff; /* White background for form sections */
+    padding: 2rem; /* Add padding */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 1.5rem; /* Space between sections */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.form-section h3 {
+    font-size: 1.5rem; /* Medium heading size */
+    font-weight: 500; /* Semi-bold text */
+    color: #212529; /* Dark text for better visibility */
+    margin-bottom: 1rem; /* Add space below the heading */
+}
+
+.form-label {
+    font-size: 0.875rem; /* Smaller text for labels */
+    font-weight: 500; /* Bold enough for emphasis */
+    color: #495057; /* Dark gray for labels */
+    margin-bottom: 0.5rem; /* Space below labels */
+}
+
+.form-control, .form-select {
+    border: 1px solid #dee2e6; /* Light gray border */
+    border-radius: 4px; /* Rounded input corners */
+    padding: 0.5rem; /* Add padding inside inputs */
+    font-size: 0.875rem; /* Consistent input text size */
+    color: #495057; /* Dark text */
+    background-color: #fff; /* White background for clarity */
+    transition: border-color 0.15s ease-in-out; /* Smooth focus effect */
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff; /* Highlight border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25); /* Blue focus outline */
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.5rem 1rem; /* Add padding */
+    font-size: 0.875rem; /* Standard button text size */
+    font-weight: 500; /* Semi-bold text */
+    border-radius: 4px; /* Rounded button corners */
+}
+
+.btn-primary {
+    background-color: #0d6efd; /* Primary button color */
+    border-color: #0d6efd; /* Match button background */
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7; /* Darker shade on hover */
+    border-color: #0a58ca; /* Match hover background */
+}
+
+/* UTM Log Styles */
+.utm-log {
+    background-color: #ffffff; /* White background for log */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem; /* Add padding */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow */
+    height: calc(100vh - 150px); /* Fill available space */
+    overflow-y: auto; /* Enable scrolling if needed */
+    margin-top: 2rem; /* Add space at the top */
+}
+
+.utm-log h3 {
+    font-size: 1.25rem; /* Medium header size */
+    font-weight: 500; /* Semi-bold text */
+    margin-bottom: 1rem; /* Add space below heading */
+}
+
+.utm-table {
+    width: 100%; /* Full width table */
+    margin-top: 1rem; /* Add space above table */
+    border-collapse: collapse; /* Remove table spacing */
+}
+
+.utm-table th {
+    background-color: #f8f9fa; /* Light background for headers */
+    padding: 0.75rem; /* Add padding */
+    font-size: 0.875rem; /* Small text for headers */
+    font-weight: 500; /* Bold header text */
+    border-bottom: 2px solid #dee2e6; /* Bottom border */
+}
+
+.utm-table td {
+    padding: 0.75rem; /* Cell padding */
+    font-size: 0.875rem; /* Standard text size */
+    border-bottom: 1px solid #dee2e6; /* Row separator */
+}
+
+.utm-table tr:hover {
+    background-color: #f8f9fa; /* Highlight row on hover */
+}
+
+/* Utility Classes */
+.text-muted {
+    font-size: 0.75rem; /* Small muted text */
+    color: #6c757d; /* Gray muted color */
+}
